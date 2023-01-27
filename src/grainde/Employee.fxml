@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #ddffcc; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grainde.EmployeeController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="29.0" prefHeight="398.0" prefWidth="180.0" style="-fx-background-color: rgb(0,0,0,0.1);" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="29.0">
+         <children>
+            <TextField id="tfnm" fx:id="tfnm" layoutX="14.0" layoutY="88.0" promptText="ENTER FIRSTNAME" />
+            <TextField id="tsnm" fx:id="tsnm" layoutX="14.0" layoutY="135.0" promptText="ENTER SURNAME" />
+            <TextField id="tunm" fx:id="tunm" layoutX="14.0" layoutY="182.0" promptText="ENTER USERNAME" />
+            <PasswordField id="tpass" fx:id="tpass" layoutX="14.0" layoutY="228.0" promptText="ENTER PASSWORD" />
+            <Button fx:id="addEmpbtn" layoutX="67.0" layoutY="327.0" mnemonicParsing="false" onAction="#AddEmployeeRecord" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: #53ff1a;" text="ADD" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField id="trole" fx:id="trole" layoutX="14.0" layoutY="274.0" promptText="ENTER ROLE" />
+            <Label alignment="CENTER" layoutX="31.0" layoutY="8.0" prefHeight="33.0" prefWidth="116.0" text="ADD EMOLPYEE" textFill="#4e03d0" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField id="tid" fx:id="tid" layoutX="14.0" layoutY="48.0" promptText="ENTER ID" />
+            <Button fx:id="searchEmpbtn" layoutX="55.0" layoutY="361.0" mnemonicParsing="false" onAction="#SearchEmp" onMouseClicked="#SearchEmp" style="-fx-background-color: #ffff80; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="SEARCH" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="remEmpbtn" layoutX="14.0" layoutY="458.0" mnemonicParsing="false" onAction="#DeletEmployee" onMouseClicked="#DeletEmployee" prefHeight="50.0" prefWidth="80.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: #ff1a1a;" text="REMOVE" AnchorPane.bottomAnchor="42.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <TableView id="EmpInfo" fx:id="EmpInfo" layoutX="206.0" layoutY="22.0" prefHeight="505.0" prefWidth="573.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+        <columns>
+          <TableColumn fx:id="empID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="empFnm" prefWidth="95.0" text="FIRST NAME" />
+            <TableColumn fx:id="empSnm" prefWidth="95.0" text="SUR NAME" />
+            <TableColumn fx:id="empUnm" prefWidth="95.0" text="USERNAME" />
+            <TableColumn fx:id="empRole" prefWidth="95.0" text="ROLE" />
+            <TableColumn fx:id="empLog" prefWidth="120.0" text="LAST LOGIN" />
+        </columns>
+      </TableView>
+      <Accordion />
+      <Button fx:id="ediEmpbtn" layoutX="104.0" layoutY="458.0" mnemonicParsing="false" onAction="#EditEmployee" onMouseClicked="#EditEmployee" prefHeight="50.0" prefWidth="80.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: #99bbff;" text="EDIT" AnchorPane.bottomAnchor="42.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

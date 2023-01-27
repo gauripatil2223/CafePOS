@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #ddffcc; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grainde.MenuController">
+   <children>
+      <AnchorPane layoutX="23.0" layoutY="51.0" prefHeight="371.0" prefWidth="181.0" style="-fx-background-color: rgb(0,0,0,0.2);">
+         <children>
+            <TextField fx:id="menu_id" layoutX="16.0" layoutY="42.0" prefHeight="25.0" prefWidth="150.0" promptText="ENTER MENU ID" />
+            <TextField fx:id="menu_nm" layoutX="16.0" layoutY="96.0" prefHeight="25.0" prefWidth="150.0" promptText="ENTER MENU NAME" />
+            <TextField fx:id="menu_rate" layoutX="17.0" layoutY="191.0" promptText="ENTER RATE OF ITEM" />
+            <Button fx:id="addbtn" layoutX="57.0" layoutY="244.0" mnemonicParsing="false" onAction="#AddMenu" onMouseClicked="#AddMenu" style="-fx-background-color: #53ff1a; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="ADD">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="searchBtn" layoutX="46.0" layoutY="304.0" mnemonicParsing="false" onAction="#SearchMenu" onMouseClicked="#SearchMenu" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #ffff80; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="SEARCH">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ChoiceBox fx:id="menu_category" layoutX="16.0" layoutY="140.0" onMouseClicked="#initcat" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="rembtn" layoutX="23.0" layoutY="453.0" mnemonicParsing="false" onAction="#RemoveMenu" onMouseClicked="#RemoveMenu" prefHeight="50.0" prefWidth="80.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: #ff1a1a;" text="REMOVE" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="mentab" layoutX="213.0" layoutY="30.0" prefHeight="490.0" prefWidth="559.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="30.0">
+        <columns>
+          <TableColumn fx:id="ITEM_ID" prefWidth="75.0" text="ITEM_ID" />
+          <TableColumn fx:id="ITEM_NAME" prefWidth="125.0" text="ITEM_NAME" />
+            <TableColumn fx:id="CATEGORY" prefWidth="125.0" text="CATEGORY" />
+            <TableColumn fx:id="RATE" prefWidth="125.0" text="RATE" />
+            <TableColumn prefWidth="125.0" text="Column X" />
+        </columns>
+      </TableView>
+      <Button fx:id="EditBtn" layoutX="114.0" layoutY="453.0" mnemonicParsing="false" onAction="#EditMenu" onMouseClicked="#EditMenu" prefHeight="50.0" prefWidth="80.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: #99bbff;" text="EDIT" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
